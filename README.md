@@ -79,6 +79,28 @@ src/
   index.css            - Global styles
 ```
 
+## Deploy to Vercel (Go Live)
+
+The easiest way to make this agent live:
+
+1. **Merge the PR** on GitHub (or push `main` directly)
+2. Go to [vercel.com/new](https://vercel.com/new) and import the `santos1995/AI-Task-Agent` repository
+3. In the Vercel project settings, add your environment variable:
+   - **Name**: `GEMINI_API_KEY`
+   - **Value**: your Gemini API key
+4. Click **Deploy** -- Vercel will build and host it automatically
+5. Your agent will be live at `https://ai-task-agent-<your-id>.vercel.app`
+
+Every push to `main` will trigger an automatic redeployment.
+
+### Alternative: Deploy via Vercel CLI
+
+```bash
+npm i -g vercel
+vercel          # follow prompts, set GEMINI_API_KEY when asked
+vercel --prod   # deploy to production
+```
+
 ## License
 
 MIT
